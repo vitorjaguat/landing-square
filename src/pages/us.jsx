@@ -1,14 +1,18 @@
+import Link from 'next/link';
+
 export default function us() {
   return (
     <div className='h-screen w-screen grid grid-rows-7 md:grid-cols-7'>
       <div className='flex items-center md:h-screen justify-center row-span-2 md:col-span-2'>
-        <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center'>
-          back
-        </div>
+        <Link href='/'>
+          <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center'>
+            back
+          </div>
+        </Link>
       </div>
 
       <div className='row-span-3 md:col-span-3 flex items-center justify-center'>
-        <div className='h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-[300px] sm:w-[400px] md:w-[500px] md:min-w-[500px] lg:w-[600px] lg:min-w-[600px] overflow-scroll bg-red-900 p-20'>
+        <div className='h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-[300px] sm:w-[400px] md:w-[500px] md:min-w-[500px] lg:w-[600px] lg:min-w-[600px] overflow-scroll bg-red-900 p-16'>
           <h2 className='pb-16'>Square Wave</h2>
           <p className='pb-16'>
             Welcome to our start-up, a company that specializes in creating
@@ -55,9 +59,28 @@ export default function us() {
         </div>
       </div>
 
-      <div className='flex items-center justify-center sm:row-span-2 md:col-span-2 md:h-screen'>
-        <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center'>
-          back
+      <div className='h-full sm:row-span-2 md:col-span-2 md:h-screen'>
+        <div className='w-screen md:h-screen md:w-full flex md:flex-col gap-4 justify-around md:items-center'>
+          <Link href=''>
+            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center'>
+              back
+            </div>
+          </Link>
+          <Link href=''>
+            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center'>
+              back
+            </div>
+          </Link>
+          <Link href=''>
+            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center'>
+              back
+            </div>
+          </Link>
+          <Link href=''>
+            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center'>
+              back
+            </div>
+          </Link>
         </div>
       </div>
     </div>
