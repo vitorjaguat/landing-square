@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    /* @apply font-arvo; */
+  }
+
   body {
     @apply bg-[#360606] text-[#d0d0d0] tracking-wide;
   }
@@ -21,6 +25,9 @@
   }
   h2 {
     @apply text-3xl sm:text-4xl;
+  }
+  li {
+    /* @apply list-disc; */
   }
   button {
     @apply shadow-md rounded-lg bg-gradient-to-r from-[#333333] to-[#5f2d2d] p-4;

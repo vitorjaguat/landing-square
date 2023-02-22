@@ -2,7 +2,12 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        arvo: ['var(--arvo-font)'],
+        // mono: ['var(--inter-font)'],
+      },
+    },
   },
   plugins: [],
 };

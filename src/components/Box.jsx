@@ -27,10 +27,7 @@ export default function Box() {
   };
 
   return (
-    <div
-      className='h-screen w-screen flex items-center justify-center'
-      style={{ fontFamily: 'inherit' }}
-    >
+    <div className='h-screen w-screen flex items-center justify-center'>
       <div className='w-[600px] h-[600px] md:w-[800px] md:h-[800px] bg-[#360606] grid gap-4 grid-cols-5 grid-rows-5'>
         <motion.div
           whileTap={{ rotate: 360 }}
@@ -429,7 +426,7 @@ export default function Box() {
             y: Math.random() * 1200 - 600,
             opacity: 0,
           }}
-          onClick={() => router.push('/about')}
+          onClick={() => router.push('/challenges')}
         >
           challenges
         </motion.div>
