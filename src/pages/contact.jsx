@@ -58,7 +58,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className='row-span-3 md:col-span-3 flex items-center justify-center'>
+        <div className='row-span-3 md:col-span-3 flex items-center justify-center z-10'>
           <div className='overflow-scroll bg-red-900 p-20 text-sm  md:text-md leading-relaxed'>
             <div className='flex justify-center mx-auto text-center pb-16'>
               <TbWaveSquare size={50} />
@@ -79,7 +79,7 @@ export default function Contact() {
                   id='name'
                   name='name'
                   placeholder='your name'
-                  className='w-full ml-6 p-2'
+                  className='w-full ml-6 p-2 bg-slate-200 focus:outline-slate-400'
                 />
               </div>
               <div className='w-full flex justify-between my-4'>
@@ -91,7 +91,7 @@ export default function Contact() {
                   id='email'
                   name='email'
                   placeholder='your email'
-                  className='w-full ml-6 p-2'
+                  className='w-full ml-6 p-2 bg-slate-200 focus:outline-slate-400'
                 />
               </div>
               <div className='w-full flex justify-between my-4'>
@@ -103,7 +103,7 @@ export default function Contact() {
                   id='subject'
                   name='subject'
                   placeholder='subject'
-                  className='w-full ml-6 p-2'
+                  className='w-full ml-6 p-2 bg-slate-200 focus:outline-slate-400'
                 />
               </div>
               <div className='w-full flex justify-between my-4'>
@@ -115,7 +115,7 @@ export default function Contact() {
                   id='message'
                   name='message'
                   placeholder='your message'
-                  className='w-full ml-6 p-2'
+                  className='w-full ml-6 p-2 bg-slate-200 focus:outline-slate-400'
                 />
               </div>
               <div className='flex w-full justify-end'>
