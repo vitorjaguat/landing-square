@@ -1,20 +1,46 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { TbWaveSquare, TbChartBubble } from 'react-icons/tb';
 
 export default function us() {
+  const router = useRouter();
+
   return (
     <div className='h-screen w-screen grid grid-rows-7 md:grid-cols-7'>
-      <div className='flex items-center md:h-screen justify-center row-span-2 md:col-span-2'>
-        <Link href='/'>
-          <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center'>
-            back
-          </div>
-        </Link>
+      <div className='flex justify-center h-full md:h-screen row-span-2 md:col-span-2'>
+        <div className='w-screen md:h-screen md:w-full flex md:flex-col gap-4 justify-around md:items-center md:gap-16 py-[15%] md:fixed'>
+          <Link href='/aims'>
+            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'>
+              aims
+            </div>
+          </Link>
+          <Link href='/team'>
+            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'>
+              team
+            </div>
+          </Link>
+          <Link href='/about'>
+            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'>
+              about
+            </div>
+          </Link>
+          <Link href='/contact'>
+            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'>
+              contact
+            </div>
+          </Link>
+        </div>
       </div>
 
+      {/* h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-[300px] sm:w-[400px] md:w-[500px] md:min-w-[500px] lg:w-[600px] lg:min-w-[600px] */}
+
       <div className='row-span-3 md:col-span-3 flex items-center justify-center'>
-        <div className='h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-[300px] sm:w-[400px] md:w-[500px] md:min-w-[500px] lg:w-[600px] lg:min-w-[600px] overflow-scroll bg-red-900 p-16'>
-          <h2 className='pb-16'>Square Wave</h2>
-          <p className='pb-16'>
+        <div className='overflow-scroll bg-red-900 p-20 text-sm  md:text-md leading-relaxed'>
+          <div className='flex justify-center mx-auto text-center pb-16'>
+            <TbWaveSquare size={50} />
+          </div>
+          <h2 className='pb-12 md:pb-16 text-center text-3xl'>square wave</h2>
+          <p className='pb-12 md:pb-16'>
             Welcome to our start-up, a company that specializes in creating
             smart solutions for architecture and design. Our team is dedicated
             to bringing innovative and cutting-edge technology to the industry
@@ -25,7 +51,7 @@ export default function us() {
           <h2 className='pb-4 text-2xl'>
             The Square Shape in Design and Architecture
           </h2>
-          <ul className='pb-16'>
+          <ul className='pb-12 md:pb-16'>
             <li>
               At the heart of our designs is the use of geometry, specifically
               the square shape. The square shape has a long history in the world
@@ -59,28 +85,33 @@ export default function us() {
         </div>
       </div>
 
-      <div className='h-full sm:row-span-2 md:col-span-2 md:h-screen'>
-        <div className='w-screen md:h-screen md:w-full flex md:flex-col gap-4 justify-around md:items-center'>
+      {/* <div className='flex justify-center h-full md:h-screen row-span-2 md:col-span-2'>
+        <Link
+          href='/'
+          className='fixed flex flex-col items-center w-[100px] h-[100px]'
+        >
+          <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex flex-col items-center justify-center'>
+            <div className='text-sm'>back</div>
+          </div>
+        </Link>
+      </div> */}
+
+      <div className='flex justify-center h-full md:h-screen row-span-2 md:col-span-2'>
+        <div className='w-screen md:h-screen md:w-full flex md:flex-col gap-4 justify-around md:items-center md:gap-16 py-[15%] md:fixed'>
           <Link href=''>
-            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center'>
-              back
-            </div>
+            <div className='w-[100px] h-[100px] items-center justify-center text-sm invisible'></div>
           </Link>
           <Link href=''>
-            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center'>
-              back
-            </div>
+            <div className='w-[100px] h-[100px] flex items-center justify-center text-sm invisible'></div>
           </Link>
           <Link href=''>
-            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center'>
+            <div className='w-[100px] h-[100px] flex items-center justify-center text-sm invisible'></div>
+          </Link>
+          <div onClick={() => router.back()}>
+            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'>
               back
             </div>
-          </Link>
-          <Link href=''>
-            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center'>
-              back
-            </div>
-          </Link>
+          </div>
         </div>
       </div>
     </div>

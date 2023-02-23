@@ -200,7 +200,7 @@ export default function Box() {
             y: Math.random() * 1200 - 600,
             opacity: 0,
           }}
-          onClick={() => router.push('/challenges')}
+          onClick={() => router.push('/aims')}
         >
           aims
         </motion.div>
@@ -426,9 +426,9 @@ export default function Box() {
             y: Math.random() * 1200 - 600,
             opacity: 0,
           }}
-          onClick={() => router.push('/challenges')}
+          onClick={() => router.push('/team')}
         >
-          challenges
+          team
         </motion.div>
         <motion.div
           initial={{
