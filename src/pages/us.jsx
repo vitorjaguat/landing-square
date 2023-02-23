@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { TbWaveSquare } from 'react-icons/tb';
 
-export default function us() {
+export default function Us() {
   const router = useRouter();
 
   return (
