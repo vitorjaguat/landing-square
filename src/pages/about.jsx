@@ -7,32 +7,32 @@ export default function About() {
 
   return (
     <div className='h-screen w-screen grid grid-rows-7 md:grid-cols-7'>
-      <div className='flex justify-center h-full md:h-screen row-span-2 md:col-span-2'>
+      <div className='flex justify-center h-full md:h-screen row-span-2 md:col-span-2 md:order-3'>
         <div className='w-screen md:h-screen md:w-full flex md:flex-col gap-4 justify-around md:items-center md:gap-16 py-[15%] md:fixed'>
           <Link href='/us'>
-            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'>
+            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'>
               <TbWaveSquare size={30} />
             </div>
           </Link>
           <Link href='/aims'>
-            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'>
+            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
               aims
             </div>
           </Link>
           <Link href='/team'>
-            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'>
+            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
               team
             </div>
           </Link>
           <Link href='/contact'>
-            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'>
+            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
               contact
             </div>
           </Link>
         </div>
       </div>
 
-      <div className='row-span-3 md:col-span-3 flex items-center justify-center'>
+      <div className='row-span-3 md:col-span-3 flex items-center justify-center md:order-2'>
         <div className='overflow-scroll bg-red-900 p-20 text-sm  md:text-md leading-relaxed'>
           <div className='flex justify-center mx-auto text-center pb-16'>
             <TbWaveSquare size={50} />
@@ -110,19 +110,19 @@ export default function About() {
         </div>
       </div>
 
-      <div className='flex justify-center h-full md:h-screen row-span-2 md:col-span-2'>
-        <div className='w-screen md:h-screen md:w-full flex md:flex-col gap-4 justify-around md:items-center md:gap-16 py-[15%] md:fixed'>
+      <div className='flex justify-center h-full md:h-screen row-span-2 md:col-span-2 md:relative md:order-1'>
+        <div className='w-screen md:h-screen md:w-full flex md:flex-col justify-center md:justify-around md:items-center md:gap-16 py-[15%] md:fixed'>
           <Link href=''>
-            <div className='w-[100px] h-[100px] items-center justify-center text-sm invisible'></div>
+            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] hidden md:flex items-center justify-center text-sm md:invisible'></div>
           </Link>
           <Link href=''>
-            <div className='w-[100px] h-[100px] flex items-center justify-center text-sm invisible'></div>
+            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] hidden md:flex items-center justify-center text-sm md:invisible'></div>
           </Link>
           <Link href=''>
-            <div className='w-[100px] h-[100px] flex items-center justify-center text-sm invisible'></div>
+            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] items-center justify-center text-sm hidden md:flex md:invisible'></div>
           </Link>
           <div onClick={() => router.back()}>
-            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'>
+            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
               back
             </div>
           </div>

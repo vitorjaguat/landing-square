@@ -6,35 +6,33 @@ export default function Us() {
   const router = useRouter();
 
   return (
-    <div className='h-screen w-screen grid grid-rows-7 md:grid-cols-7'>
-      <div className='flex justify-center h-full md:h-screen row-span-2 md:col-span-2'>
+    <div className='h-screen w-screen grid md:grid-row-reverse grid-rows-7 md:grid-cols-7'>
+      <div className='flex  justify-center h-full md:h-screen row-span-2 md:col-span-2 md:order-3'>
         <div className='w-screen md:h-screen md:w-full flex md:flex-col gap-4 justify-around md:items-center md:gap-16 py-[15%] md:fixed'>
           <Link href='/aims'>
-            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'>
+            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
               aims
             </div>
           </Link>
           <Link href='/team'>
-            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'>
+            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
               team
             </div>
           </Link>
           <Link href='/about'>
-            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'>
+            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
               about
             </div>
           </Link>
           <Link href='/contact'>
-            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'>
+            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
               contact
             </div>
           </Link>
         </div>
       </div>
 
-      {/* h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-[300px] sm:w-[400px] md:w-[500px] md:min-w-[500px] lg:w-[600px] lg:min-w-[600px] */}
-
-      <div className='row-span-3 md:col-span-3 flex items-center justify-center'>
+      <div className='row-span-3 md:col-span-3 flex items-center justify-center md:order-2'>
         <div className='overflow-scroll bg-red-900 p-20 text-sm  md:text-md leading-relaxed'>
           <div className='flex justify-center mx-auto text-center pb-16'>
             <TbWaveSquare size={50} />
@@ -77,38 +75,34 @@ export default function Us() {
               visualization tools, energy-efficient design tools, project
               management tools, and smart building technology.
             </li>
-            <li>
+            <li className='pb-16'>
               Our focus on the square shape ensures that our designs are not
               only visually appealing but also functional and practical.
+            </li>
+            <li>
+              In conclusion, our start-up aims to bring smart solutions to the
+              architecture and design industry by incorporating innovative
+              technology and a focus on the versatile and timeless square shape.
+              Through our approach to design, we strive to create sustainable
+              and practical structures that meet the needs of our clients.
             </li>
           </ul>
         </div>
       </div>
 
-      {/* <div className='flex justify-center h-full md:h-screen row-span-2 md:col-span-2'>
-        <Link
-          href='/'
-          className='fixed flex flex-col items-center w-[100px] h-[100px]'
-        >
-          <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex flex-col items-center justify-center'>
-            <div className='text-sm'>back</div>
-          </div>
-        </Link>
-      </div> */}
-
-      <div className='flex justify-center h-full md:h-screen row-span-2 md:col-span-2'>
-        <div className='w-screen md:h-screen md:w-full flex md:flex-col gap-4 justify-around md:items-center md:gap-16 py-[15%] md:fixed'>
+      <div className='flex justify-center h-full md:h-screen row-span-2 md:col-span-2 md:order-1 md:relative'>
+        <div className='w-screen md:h-screen md:w-full flex md:flex-col justify-center md:justify-around md:items-center md:gap-16 py-[15%] md:fixed'>
           <Link href=''>
-            <div className='w-[100px] h-[100px] items-center justify-center text-sm invisible'></div>
+            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] hidden md:flex items-center justify-center text-sm md:invisible'></div>
           </Link>
           <Link href=''>
-            <div className='w-[100px] h-[100px] flex items-center justify-center text-sm invisible'></div>
+            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] hidden md:flex items-center justify-center text-sm md:invisible'></div>
           </Link>
           <Link href=''>
-            <div className='w-[100px] h-[100px] flex items-center justify-center text-sm invisible'></div>
+            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] items-center justify-center text-sm hidden md:flex md:invisible'></div>
           </Link>
           <div onClick={() => router.back()}>
-            <div className='w-[100px] h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'>
+            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
               back
             </div>
           </div>
