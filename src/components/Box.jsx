@@ -349,7 +349,11 @@ export default function Box() {
           exit={{
             backgroundColor: 'transparent',
             scale: 1.3,
-            transition: { duration: 1 },
+            transition: {
+              duration: 0.5,
+              delay: 0.1,
+              rotate: { delay: 0.1, duration: 0.5 },
+            },
           }}
           onClick={() => router.push('/us')}
         >
@@ -437,6 +441,15 @@ export default function Box() {
             rotate: mn(),
           }}
           animate={{ x: 0, y: 0, rotate: [mn(), mp(), 0] }}
+          transition={{
+            type: 'spring',
+            duration: 4,
+            damping: 7,
+            bounce: 20,
+            rotate: { delay: 0.6, duration: 2 },
+            x: { type: 'spring', duration: 1 },
+            y: { type: 'spring', duration: 1 },
+          }}
           className='bg-red-900 hover:bg-red-800'
           exit={{
             x: Math.random() * 1200 - 600,

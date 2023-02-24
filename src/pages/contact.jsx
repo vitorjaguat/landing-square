@@ -5,6 +5,16 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+
+const linksVar = {
+  hidden: {
+    x: -200,
+  },
+  visible: {
+    x: 0,
+  },
+};
 
 export default function Contact() {
   const router = useRouter();
@@ -36,24 +46,44 @@ export default function Contact() {
       <div className='flex justify-center h-full md:h-screen row-span-2 md:col-span-2 md:order-3'>
         <div className='w-screen md:h-screen md:w-full flex md:flex-col gap-4 justify-around md:items-center md:gap-16 py-[15%] md:fixed'>
           <Link href='/us'>
-            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'>
+            <motion.div
+              className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-sm cursor-pointer'
+              variants={linksVar}
+              initial='hidden'
+              animate='visible'
+            >
               <TbWaveSquare size={30} />
-            </div>
+            </motion.div>
           </Link>
           <Link href='/aims'>
-            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
+            <motion.div
+              className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'
+              variants={linksVar}
+              initial='hidden'
+              animate='visible'
+            >
               aims
-            </div>
+            </motion.div>
           </Link>
           <Link href='/team'>
-            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
+            <motion.div
+              className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'
+              variants={linksVar}
+              initial='hidden'
+              animate='visible'
+            >
               team
-            </div>
+            </motion.div>
           </Link>
           <Link href='/about'>
-            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
+            <motion.div
+              className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'
+              variants={linksVar}
+              initial='hidden'
+              animate='visible'
+            >
               about
-            </div>
+            </motion.div>
           </Link>
         </div>
       </div>
@@ -61,7 +91,9 @@ export default function Contact() {
       <div className='row-span-3 md:col-span-3 flex items-center justify-center z-10 md:order-2'>
         <div className='overflow-scroll bg-red-900 p-20 text-sm  md:text-md leading-relaxed'>
           <div className='flex justify-center mx-auto text-center pb-16'>
-            <TbWaveSquare size={50} />
+            <Link href='/'>
+              <TbWaveSquare size={50} />
+            </Link>
           </div>
           <h2 className='pb-12 md:pb-16 text-center text-3xl'>contact us</h2>
           <p className='pb-12 md:pb-16'>
@@ -129,10 +161,22 @@ export default function Contact() {
           </form>
 
           <div className='mt-[90px] flex justify-center gap-16'>
-            <AiOutlineMail size={25} />
-            <FaGithub size={25} />
-            <FaLinkedinIn size={25} />
-            <BsFillPersonLinesFill size={25} />
+            <AiOutlineMail
+              size={25}
+              className='cursor-pointer hover:text-slate-200 hover:scale-110'
+            />
+            <FaGithub
+              size={25}
+              className='cursor-pointer hover:text-slate-200 hover:scale-110'
+            />
+            <FaLinkedinIn
+              size={25}
+              className='cursor-pointer hover:text-slate-200 hover:scale-110'
+            />
+            <BsFillPersonLinesFill
+              size={25}
+              className='cursor-pointer hover:text-slate-200 hover:scale-110'
+            />
           </div>
         </div>
       </div>
@@ -149,9 +193,14 @@ export default function Contact() {
             <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] items-center justify-center text-sm hidden md:flex md:invisible'></div>
           </Link>
           <div onClick={() => router.back()}>
-            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
+            <motion.div
+              className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'
+              variants={linksVar}
+              initial='hidden'
+              animate='visible'
+            >
               back
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

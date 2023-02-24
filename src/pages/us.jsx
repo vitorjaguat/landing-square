@@ -1,6 +1,16 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { TbWaveSquare } from 'react-icons/tb';
+import { motion } from 'framer-motion';
+
+const linksVar = {
+  hidden: {
+    x: -200,
+  },
+  visible: {
+    x: 0,
+  },
+};
 
 export default function Us() {
   const router = useRouter();
@@ -10,24 +20,44 @@ export default function Us() {
       <div className='flex  justify-center h-full md:h-screen row-span-2 md:col-span-2 md:order-3'>
         <div className='w-screen md:h-screen md:w-full flex md:flex-col gap-4 justify-around md:items-center md:gap-16 py-[15%] md:fixed'>
           <Link href='/aims'>
-            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
+            <motion.div
+              className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'
+              variants={linksVar}
+              initial='hidden'
+              animate='visible'
+            >
               aims
-            </div>
+            </motion.div>
           </Link>
           <Link href='/team'>
-            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
+            <motion.div
+              className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'
+              variants={linksVar}
+              initial='hidden'
+              animate='visible'
+            >
               team
-            </div>
+            </motion.div>
           </Link>
           <Link href='/about'>
-            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
+            <motion.div
+              className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'
+              variants={linksVar}
+              initial='hidden'
+              animate='visible'
+            >
               about
-            </div>
+            </motion.div>
           </Link>
           <Link href='/contact'>
-            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
+            <motion.div
+              className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'
+              variants={linksVar}
+              initial='hidden'
+              animate='visible'
+            >
               contact
-            </div>
+            </motion.div>
           </Link>
         </div>
       </div>
@@ -35,7 +65,9 @@ export default function Us() {
       <div className='row-span-3 md:col-span-3 flex items-center justify-center md:order-2'>
         <div className='overflow-scroll bg-red-900 p-20 text-sm  md:text-md leading-relaxed'>
           <div className='flex justify-center mx-auto text-center pb-16'>
-            <TbWaveSquare size={50} />
+            <Link href='/'>
+              <TbWaveSquare size={50} />
+            </Link>
           </div>
           <h2 className='pb-12 md:pb-16 text-center text-3xl'>square wave</h2>
           <p className='pb-12 md:pb-16'>
@@ -102,9 +134,14 @@ export default function Us() {
             <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] items-center justify-center text-sm hidden md:flex md:invisible'></div>
           </Link>
           <div onClick={() => router.back()}>
-            <div className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'>
+            <motion.div
+              className='w-[70px] h-[70px] md:w-[100px] md:h-[100px] bg-red-900 hover:bg-red-800  flex items-center justify-center text-xs md:text-sm cursor-pointer'
+              variants={linksVar}
+              initial='hidden'
+              animate='visible'
+            >
               back
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
